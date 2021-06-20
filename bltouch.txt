@@ -1,0 +1,11 @@
+Bl Touch Wires:
+From left to right with logo facing towards you.
+White, black, orange, red, browm
+Blue, red, yellow, black, white
+
+X Min Stop
+Black (red) in the middle, white (blue) on bottom of z min
+
+Servos
+From left to right
+Red (black), brown (white), orange (yellow)

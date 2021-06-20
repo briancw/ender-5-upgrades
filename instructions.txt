@@ -1,0 +1,66 @@
+Guides Followed:
+https://www.youtube.com/watch?v=kTm-5Vo_ekk
+https://www.youtube.com/watch?v=GNGN2iSQ5j4&t=0s
+(2209's)
+https://www.youtube.com/watch?v=dOJbSrWVu_Q
+
+Download Marlin Nightly (2.0.x bugfix)
+https://marlinfw.org/meta/download/
+
+Download a baseline configuration for printer
+https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.0.x/config/examples/Creality/Ender-5%20Pro
+
+Edit the following
+platformio.ini
+  default_envs = LPC1768
+
+Configuration.h
+  #define SERIAL_PORT -1
+  #define SERIAL_PORT_2 0
+  #define BAUDRATE_2 115200
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_3
+  #define X_DRIVER_TYPE TMC2209
+  #define Y_DRIVER_TYPE TMC2209
+  #define Z_DRIVER_TYPE TMC2209
+  #define E0_DRIVER_TYPE TMC2209
+
+Configuration_adv.h
+  #define E0_AUTO_FAN_PIN P2_04
+  #define HYBRID_THRESHOLD
+
+IN VSCode in the PlatformIO tab, under Project Tasks > LPC1768 > General > Build
+
+Building takes a hot minute. It will be output to Marlin/.pio/build/lpc1768/firmware.bin
+
+Bl Touch:
+https://www.youtube.com/watch?v=7le9L2LMY-U
+
+Configuration.h
+  #define BLTOUCH
+  #define NOZZLE_TO_PROBE_OFFSET { -42, -6, 0 }
+  // #define MIN_SOFTWARE_ENDSTOP_Z
+  #define AUTO_BED_LEVELING_BILINEAR
+  #define EXTRAPOLATE_BEYOND_GRID
+  #define LCD_BED_LEVELING
+  #define Z_SAFE_HOMING
+
+ If you are impatient
+  #define XY_PROBE_FEEDRATE (150*60)
+  #define Z_PROBE_FEEDRATE_FAST (8*60)
+  #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 4)
+
+ For more accuracy if you want
+  #define MULTIPLE_PROBING 2
+
+ Consider
+  #define AUTO_BED_LEVELING_UBL
+
+Configuration_adv.h
+  #define BLTOUCH_DELAY 500
+  #define BLTOUCH_FORCE_SW_MODE
+  #define PROBE_OFFSET_WIZARD
+ Comment out if using a clone BL Touch or < v3.1
+  #define BLTOUCH_SET_5V_MODE
+  
+# Add to Start Gcode in Cura or other slicing software after "G28 ; Home"
+G29 ;Auto Bed Level
