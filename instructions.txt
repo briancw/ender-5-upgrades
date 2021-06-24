@@ -27,6 +27,8 @@ Configuration.h
 Configuration_adv.h
   #define E0_AUTO_FAN_PIN P2_04
   #define HYBRID_THRESHOLD
+  #define INTERPOLATE      true
+  #define BABYSTEP_MULTIPLICATOR_Z  10
 
 IN VSCode in the PlatformIO tab, under Project Tasks > LPC1768 > General > Build
 
@@ -64,3 +66,14 @@ Configuration_adv.h
   
 # Add to Start Gcode in Cura or other slicing software after "G28 ; Home"
 G29 ;Auto Bed Level
+
+# Dual Extruder
+Configuration.h
+#define EXTRUDERS 2
+#define SINGLENOZZLE
+// #define PREVENT_COLD_EXTRUSION
+// #define EXTRUDE_MINTEMP 170
+// #define PREVENT_LENGTHY_EXTRUDE
+// #define EXTRUDE_MAXLENGTH 200
+#define E1_DRIVER_TYPE TMC2209
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 93, 93 }

@@ -1,0 +1,15 @@
+There are multiple ways to do multi extrusion. Most seem to reccomend start and end Gcode in extruder settings, but I don't like this approach.
+Instead, you can get good results using just Cura's profile settings and the Printer Settings plugin.
+
+Start by measuring the distance from the top of the Y joint to the nozzle.
+Simplest way is to set the filament right at the beginning and extrude until it comes out the nozzle.
+We'll call this "Parking Distance"
+
+Set "Heat Zone Length" to your Parking Distance on both extruders
+Make sure "Nozzle Switch Retraction Distance" is using the same setting
+Tick "Extruders Share Heater"
+Tick "Extruders Share Nozzle"
+
+If you want to always start with both filemnts before the nozzle, set "Shared Nozzle Initial Retraction" to your Parking Distance on BOTH extruders.
+If you want to start with Extruder 1 loaded and do a nozzle swipe, set "Shared Nozzle Initial Retraction" to 0 on the first extruder and Parking Distance on the other.
+
