@@ -1,0 +1,2 @@
+Modify Menu
+https://github.com/KevinOConnor/klipper/blob/master/klippy/extras/display/menu.cfg

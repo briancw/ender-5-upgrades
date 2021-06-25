@@ -1,0 +1,8 @@
+G28
+PROBE_CALIBRATE
+TESTZ Z=-0.1
+# Keep running while doing a paper test till satisfied
+ACCEPT
+SAVE_CONFIG
+
+# Backport the auto generated z_offset to main config

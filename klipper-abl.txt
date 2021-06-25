@@ -1,2 +1,3 @@
 There is a Gcode macro in the printer.cfg for leveling the bed and saving it to a variable "ENDER5"
-Run G29 from the octoprint terminal then add "BED_MESH_PROFILE LOAD=ENDER5" to slicing software
+Run G29 from the octoprint terminal to probe the bed and save out the level to the config file
+You can use: ```BED_MESH_PROFILE LOAD=ENDER5``` in slicing software or directly in Octoprint's Gcode Scripts to load the level.
