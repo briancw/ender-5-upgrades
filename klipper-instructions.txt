@@ -1,0 +1,12 @@
+# Klipper for SKR 1.3
+### Follow the klipper instructions
+### https://www.klipper3d.org/Installation.html
+
+For make menuconfig:
+ [x] enable extra low-level configuration options
+ Microcontroller Architecture > LPC 1768 (100MHZ)
+ [x] Target Board uses Smoothieware Bootloader
+ [x] Use USB for communication
+
+### Copy ~/klipper/out/klipper.bin to the SKR's microsd card as firmware.bin
+
