@@ -1,3 +1,6 @@
 Ender 5 based config
 https://www.reddit.com/r/klippers/comments/macqhu/working_klipper_config_for_ender_5_with_bltouch/
 https://pastebin.com/WSehaJJN
+
+A bunch of stuff on an SKR
+https://www.reddit.com/r/klippers/comments/csjzid/sample_config_for_ender_3_bltouch_v30_skr_v13/
