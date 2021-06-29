@@ -1,11 +1,5 @@
-Calibrate extruder rotation_distance (steps per mm)
-https://www.klipper3d.org/Rotation_Distance.html
-
 Pressure Advance
 https://www.klipper3d.org/Pressure_Advance.html
-
-Klipper can help you get the bed perfectly level
-[screws_tilt_adjust]
 
 Add macros to octoprint?
 
